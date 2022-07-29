@@ -1,4 +1,4 @@
-// https://github.com/john-guerra/forceInABox#readme v1.0.0 Copyright 2021 undefined
+// https://github.com/john-guerra/forceInABox#readme v1.0.1 Copyright 2022 undefined
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('d3')) :
 typeof define === 'function' && define.amd ? define(['d3'], factory) :
@@ -74,8 +74,21 @@ function forceInABox() {
 
     for (let i = 0, n = nodes.length, node, k = alpha * strength; i < n; ++i) {
       node = nodes[i];
-      node.vx += (foci[groupBy(node)].x - node.x) * k;
-      node.vy += (foci[groupBy(node)].y - node.y) * k;
+
+      let fociX = 0;
+      const fociXNode =foci[groupBy(node)];
+      if(fociXNode){
+        fociX = fociXNode.x;
+      }
+
+      let fociY = 0;
+      const fociYNode =foci[groupBy(node)];
+      if(fociYNode){
+        fociY = fociYNode.y;
+      }
+      
+      node.vx += (fociX - node.x) * k;
+      node.vy += (fociY - node.y) * k;
     }
   }
 
