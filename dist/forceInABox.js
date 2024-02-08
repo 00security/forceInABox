@@ -1,9 +1,9 @@
-// https://github.com/john-guerra/forceInABox#readme v1.0.1 Copyright 2022 undefined
+// https://github.com/john-guerra/forceInABox#readme v1.0.1 Copyright 2024 undefined
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('d3')) :
 typeof define === 'function' && define.amd ? define(['d3'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.forceInABox = factory(global.d3));
-}(this, (function (d3) { 'use strict';
+})(this, (function (d3) { 'use strict';
 
 function _interopNamespace(e) {
 if (e && e.__esModule) return e;
@@ -14,14 +14,12 @@ if (k !== 'default') {
 var d = Object.getOwnPropertyDescriptor(e, k);
 Object.defineProperty(n, k, d.get ? d : {
 enumerable: true,
-get: function () {
-return e[k];
-}
+get: function () { return e[k]; }
 });
 }
 });
 }
-n['default'] = e;
+n["default"] = e;
 return Object.freeze(n);
 }
 
@@ -584,4 +582,4 @@ function forceInABox() {
 
 return forceInABox;
 
-})));
+}));

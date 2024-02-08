@@ -1,4 +1,4 @@
-// https://github.com/john-guerra/forceInABox#readme v1.0.1 Copyright 2022 undefined
+// https://github.com/john-guerra/forceInABox#readme v1.0.1 Copyright 2024 undefined
 import * as d3 from 'd3';
 
 function forceInABox() {
@@ -556,4 +556,4 @@ function forceInABox() {
 
 // module.exports = forceInABox;
 
-export default forceInABox;
+export { forceInABox as default };
